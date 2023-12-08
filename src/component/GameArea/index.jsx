@@ -5,6 +5,9 @@ import "./style.css";
 import TileContainer from "../../container/Tile";
 
 const GameUI = ({ randomEmojis, handleClick, selectedIndexByUser }) => {
+  if (randomEmojis.length == 0) {
+    return <h1>You won</h1>;
+  }
   return (
     <div className="game-container">
       {randomEmojis.map((item, index) => (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import GameUI from "../../component/GameArea";
 
 const GameArea = () => {
@@ -38,7 +38,7 @@ const GameArea = () => {
     distributeEmojis();
   }, []);
 
-  const handleClick = (emojiValue, selectedIndex) => {
+  const handleClick = useCallback((emojiValue, selectedIndex) => {
     let openIndex = [...selectedIndexByUser];
 
     if (turn === "firstCard") {
@@ -57,7 +57,7 @@ const GameArea = () => {
       }
     }
     setselectedIndexByUser(openIndex);
-  };
+  });
 
   return (
     <GameUI

@@ -7,13 +7,11 @@ const TileContainer = ({ emoji, handleClick, index, selectedIndexByUser }) => {
   };
 
   return (
-    <div>
-      <Tile
-        isHidden={!selectedIndexByUser.includes(index)}
-        emoji={emoji}
-        handleClick={(clickedEmoji) => handleTileClick(clickedEmoji)}
-      />
-    </div>
+    <Tile
+      isHidden={!selectedIndexByUser.includes(index)}
+      emoji={emoji}
+      handleClick={(clickedEmoji) => handleTileClick(clickedEmoji)}
+    />
   );
 };
 
