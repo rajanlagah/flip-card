@@ -9,7 +9,7 @@ const GameUI = ({ randomEmojis, handleClick, selectedIndexByUser }) => {
     return (
       <>
         <h1>You won</h1>
-        <a href="" onClick={() => window.reload()}>
+        <a href="" onClick={() => window.location.reload()}>
           Restart?
         </a>
       </>
