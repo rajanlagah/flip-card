@@ -6,7 +6,14 @@ import TileContainer from "../../container/Tile";
 
 const GameUI = ({ randomEmojis, handleClick, selectedIndexByUser }) => {
   if (randomEmojis.length == 0) {
-    return <h1>You won</h1>;
+    return (
+      <>
+        <h1>You won</h1>
+        <a href="" onClick={() => window.reload()}>
+          Restart?
+        </a>
+      </>
+    );
   }
   return (
     <div className="game-container">
